@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  pocketbase:
+    image: ghcr.io/stetsed/pocket-base-docker:main
+    ports:
+      - 9384:18420
+    volumes:
+      - ./pocketbase:/pb/pb_data
+    restart: unless-stopped
+
